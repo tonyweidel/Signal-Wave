@@ -4,8 +4,8 @@ let signal = function(array){
   let numberOfPoints = array.length;
   let points = array;
   let transformedPoints = array;
-  let range = array;
-  let period = array;
+  let range;
+  let period;
 
   function getRange(){return range;}
   function getPeriod(){return period;}
@@ -45,4 +45,20 @@ let signal = function(array){
         let tempPoint = new Point(tempx, tempy);
       }
     }
+    function transformation(){
+            return transformedPoints;
+    }
+    outputOf(xvalue){
+        for(let x=0; x<numberOfPoints; x++){
+            if(points.getX()[x] == xvalue){
+                return points.getY();
+            }
+        }
+        console.log("Your x-value does not have a y-value")
+        }
+
+    function calculateSpan(array){
+        Math.max(array)-Math.min(array);
+    }
 }
+module.exports = Wave;
