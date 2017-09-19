@@ -19,6 +19,9 @@ const Point = function(xcor,ycor){
   function direction(){
     return Math.atan(y/x)*180/Math.Pi;
   }
-  return {getX,getY,magnitude,distanceTo,direction};
+  function print(){
+      console.log("("+x+", "+y+")");
+  }
+  return {getX,getY,magnitude,distanceTo,direction,print};
 }
 module.exports = Point;
